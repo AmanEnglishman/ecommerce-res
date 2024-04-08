@@ -19,3 +19,13 @@ class UserListAPIView(generics.ListAPIView):
 class LoginAPIView(TokenObtainPairView):
     permission_classes = (AnonPermission,)
     serializer_class = MyTokenSerializer
+
+
+class UserDetailAPIView(generics.RetrieveAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
+
+
+# class UserUpdateAPIView(generics.UpdateAPIView):
+#     queryset = CustomUser.objects.all()
+#     serializer_class =
