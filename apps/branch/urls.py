@@ -1,12 +1,11 @@
 from django.urls import path
 
-from .views import BranchListAPIView, BranchCreateAPIView, BranchUpdateAPIView, BranchDestroyAPIView, BranchRetrieveAPIView
+from .views import BranchListAPIView, BranchRetrieveAPIView, BootListAPIView, BootRetrieveAPIView
 
 urlpatterns = [
     path('', BranchListAPIView.as_view(), name='branch-list'),
-    path('create/', BranchCreateAPIView.as_view(), name='branch-create'),
     path('<int:pk>/', BranchRetrieveAPIView.as_view(), name='branch-retrieve'),
-    path('update/<int:pk>/', BranchUpdateAPIView.as_view(), name='branch-update'),
-    path('destroy/<int:pk>/', BranchDestroyAPIView.as_view(), name='branch-destroy'),
+    path('boot/', BootListAPIView.as_view(), name='branch-list'),
+    path('boot/<int:pk>/', BootRetrieveAPIView.as_view(), name='boot-list'),
 
 ]

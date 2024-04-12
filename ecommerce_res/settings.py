@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(h@hjj)3i@#m=#(&tavve#13$c+zze768y@nq72n9imi2$u_5+
 DEBUG = True
 
 ALLOWED_HOSTS = []
-AUTH_USER_MODEL = 'user.CustomUser'
+AUTH_USER_MODEL = 'user.MyUser'
 
 # Application definition
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'apps.user',
     'apps.menu',
-    'apps.branch'
+    'apps.branch',
+    'apps.cart',
 
 ]
 
